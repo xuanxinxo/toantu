@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function birthday(){
+      var weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+      var d = new Date(prompt("Input your birthday: "))
+      var day = weekday[d.getDay()];
+      var year = d.getFullYear()
+      var date = d.getDate()
+      var month = d.getMonth()+1
+      alert("Sinh vao thu: " + day)
+      alert("Sinh vao ngay: " + date)
+      alert("Sinh vao thang: " + month)
+      alert("Sinh vao nam: " + year)
+      var currentDate = new Date()
+      var currentYear = currentDate.getFullYear()
+      alert("Tuoi: " + (currentYear - year));
+    }
+  </script>
+  <button onclick="birthday()">
+    Birthday
+  </button>
+</body>
+</html>
